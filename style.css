@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+}
+
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "main main main"
+    ". gridone ."
+    ". gridtwo ."
+    ". gridthree .";
+}
+  
+.main { 
+    grid-area: main; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-color: #33A8DD;
+    color: white;
+    font-size: 250%;
+}
+#titlefont {
+    font-size: 100%;
+    text-align: left;
+    margin-left: 19%;
+    margin-right: 19%;
+    margin-top: 30%;
+    margin-bottom: 30%;
+}
+
+.gridone {grid-area: gridone;}
+.gridtwo {grid-area: gridtwo;}
+.gridthree {grid-area: gridthree;}
+
+h2, p {
+    text-align: center;
+    font-size: 5vw;
+}
+
+h2 {
+    margin: 10px auto 10px auto;
+}
+
+#barone {
+    background-color: #33A8DD;
+}
+
+#bartwo {
+    background-color: #F46831;
+}
+
+#barthree {
+    background-color: #2BCEC0;
+}
+
+#barone, #bartwo, #barthree {
+    width: 120px;
+    height: 20px;
+    margin: 30px auto 0px auto;
+}
+
+@media (min-width: 576px) {
+    .container {  display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        "main main"
+        "gridone gridtwo"
+        "gridthree .";
+    }
+    #titlefont {
+        text-align: left;
+        margin-left: 19%;
+        margin-right: 19%;
+        margin-top: 23%;
+        margin-bottom: 23%;
+    }
+    
+}
+
+@media (min-width: 992px){
+    .container {  display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr ;
+        grid-template-areas:
+        "main main main"
+        "gridone gridtwo gridthree";
+    }
+
+    .main {
+        background-color: #2BCEC0;
+    }
+
+    .gridone, .gridtwo, .gridthree {
+        background-color: #1B1B1B;
+        color: white;
+        height: 50vh;
+    }
+    #titlefont {
+        text-align: left;
+    }
+    .main {
+        height: 50vh;
+    }
+    h2, p {
+        text-align: center;
+        font-size: 2.5vw;
+    }
+    p {
+        padding: 1vw;
+    }
+}
